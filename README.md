@@ -4,9 +4,15 @@ Stateful Session Enterprise Java Beans
 If both are using the same EJB a conflict will appear.
 This is because Eclipse and Glassfish do not know which EJB to use
 The remedy is to name each EJB
-in this case @Stateless(name = "flightStateless") and @Stateful(name = "flightStateful") 
+in this case 
+
+	@Stateless(name = "flightStateless") 
+and 
+
+	@Stateful(name = "flightStateful") 
 can then be used as:
-  @EJB(beanName = "flightStateless")
+  
+  	@EJB(beanName = "flightStateless")
 	private FlightLocal_ejb8 fs;
 	
 	@EJB(beanName = "flightStateful")
